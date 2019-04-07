@@ -1,0 +1,31 @@
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Ofertas</h1>
+      <p class="lead text-muted">Veja as nossas ofertas </p>
+      <p>
+        <a href="#" class="btn btn-primary my-2">Main call to action</a>
+      </p>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+       <div class="row">
+        <div class="col-md-4" *ngFor="let oferta of ofertas">
+          <div class="card">
+            <img class="card-img-top" [src]="oferta.imagens[0].url">
+            <div class="card-block">
+                <h4 class="card-title">{{oferta.anunciante}}</h4>
+                <p class="card-text">{{oferta.descricao_oferta}}</p>
+                <p class="preco">{{oferta.valor}}</p>
+                <a [routerLink]="['/oferta',oferta.id]" class="btn btn-outline-primary">Ver Oferta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
