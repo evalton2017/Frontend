@@ -19,7 +19,7 @@
             <div class="card-block">
                 <h4 class="card-title">{{oferta.anunciante}}</h4>
                 <p class="card-text">{{oferta.descricao_oferta}}</p>
-                <p class="preco">{{oferta.valor}}</p>
+                <p class="preco">{{oferta.valor |formatCurrency}}</p>
                 <a [routerLink]="['/oferta',oferta.id]" class="btn btn-outline-primary">Ver Oferta</a>
             </div>
           </div>

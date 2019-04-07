@@ -19,24 +19,35 @@
         </li>
       </ul>
           <div class="col-md-6">
+          
               <input class="form-control mr-sm-2"
               type="text" placeholder="Pesquisa sua oferta" 
               aria-label="Search"
               #referencia
               (keyup)="pesquisa(referencia.value)"
               >
-              <ul class="list-group" style="position:absolute">
-              <li class="list-group-item" *ngFor="let oferta of ofertas2">{{oferta.descricao_oferta}}</li>
-       
+              <ul class="list-group" style="position:absolute; z-index:999">
+              <li class="list-group-item" *ngFor="let oferta of ofertas | async">
+                <a [routerLink]="['/oferta',oferta.id]" (click)="limparPesquisa()">
+                    {{oferta.titulo |uppercase}}
+                </a> 
+              </li>
+              
               </ul>
           </div>
           <div class="col-md-6">
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Carrinho</button>
           </div>
+
+          <div class="col-md-3">
+            <p style="color:white">{{data |date:'dd/MM/yyy HH:mm'}}</p>
+        </div>
       </div>
         
        
     </div>
+
+    
   </nav>
 </header>
 
