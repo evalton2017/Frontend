@@ -16,6 +16,7 @@ import { OfertaComponent } from './oferta/oferta.component';
 import { ComoUsarComponent } from './oferta/como-usar/como-usar.component';
 import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
 import { FormatCurrencyPipe } from './format-currency.pipe';
+import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FormatCurrencyPipe } from './format-currency.pipe';
     ComoUsarComponent,
     OndeFicaComponent,
     FormatCurrencyPipe,
+    OrdemCompraComponent,
     
   ],
   imports: [
